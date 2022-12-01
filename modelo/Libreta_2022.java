@@ -5,23 +5,35 @@ public class Libreta_2022
     
         // 
         private int numeroCuenta;
-        private double saldo;
+        private int saldo;
+        private double interes;
         
-        public Libreta_2022(int cuenta3, double inicial) 
+
+        
+        public Libreta_2022(int cuenta3, int inicial) 
         {
             numeroCuenta = cuenta3;
             saldo = inicial;
         } 
     
-        public void depositar(double cantidad) {
-            saldo = saldo + cantidad;
+        public void depositar(int cantidad3) 
+        {
+            saldo = saldo + cantidad3;
         } 
     
-        public void retirar(double cantidad) {
-            saldo = saldo - cantidad;
+        public void retirar(int cantidad3)
+        {
+            saldo = (int) (saldo -( cantidad3 - (0.02*cantidad3)));
+            
         } 
-    
-        public double saldo() {
+        
+        public void interes ()
+        {
+           interes = saldo + (0.08*saldo);
+        }
+
+
+        public int saldo() {
             return saldo;
         }   
         

@@ -14,13 +14,13 @@ public class Test
         // Creamos laa cuentas
 
         Cuenta cuenta1;
-        Cuenta1 = new cuenta1(11111, 200000);
+        cuenta1 = new Cuenta(11111, 2000000);
 
         Cuenta_Ahorro cuenta2;
-        cuenta2 = new cuenta2(12345, 3000000);
+        cuenta2 = new Cuenta_Ahorro(12345, 30000000);
 
         Libreta_2022 cuenta3;
-        cuenta3 = new cuenta3(12543, 5000000);
+        cuenta3 = new Libreta_2022(12543, 50000000);
 
 
 
@@ -29,24 +29,57 @@ public class Test
 
         // Consultar saldo
         totalCuenta = cuenta1.saldo();
-        System.out.println("Total actual en la cuenta: " +  " $ " + totalCuenta );
-
-        //saber el interes
-
-        totalCuenta = cuenta2.interes();
-
-
+        System.out.println("Total actual en la cuenta: " + cuenta1 +   " $ " + totalCuenta );
 
         // consignar
-        double ingreso = 350.250;
-        System.out.println("Se ingresan en la cuenta: " +  " $ "  + ingreso );
-        Cuenta1.depositar(ingreso);
-        
-        System.out.println("     ");
+        int cantidad = 350000;
+        System.out.println("Se ingresan en la cuenta: " +  " $ "  + cantidad );
+        cuenta1.depositar(cantidad);
 
         // saber el saldo
-        totalCuenta = Cuenta1.saldo();
-        System.out.println("Total actual en la cuenta: " +  " $" + totalCuenta );        
+        totalCuenta = cuenta1.saldo();
+        System.out.println("Total actual en la cuenta: " +  " $" + totalCuenta );  
+
+        System.out.println("---------------------------------------------------");
+
+        //---------------------------------------------------------------------
+        //cuenta ahorros
+
+        // Consultar saldo
+         totalCuenta = cuenta2.saldo();
+         System.out.println("Total actual en la cuenta ahorros: " + cuenta2 +  " $ " + totalCuenta );
+    
+    
+        // consignar
+        int cantidad2 = 800000;
+        System.out.println("Se ingresan en la cuenta ahorros: " +  " $ "  + cantidad2 );
+        cuenta2.depositar(cantidad2);
+
+    
+        // saber el saldo
+        totalCuenta = cuenta2.saldo();
+        System.out.println("Total actual en la cuenta ahorros: " +  " $" + totalCuenta );    
+            
+        System.out.println("-----------------------------------------------------------");
+        //---------------------------------------------------------------------
+        //libreta_2022
+
+        // Consultar saldo
+        totalCuenta = cuenta3.saldo();
+        System.out.println("Total actual en la cuenta libreta 2022: " + cuenta3 +  " $ " + totalCuenta );
+
+       // consignar
+       int ingreso3 = 950000;
+       System.out.println("Se ingresan en la cuenta libreta 2022: " +  " $ "  + ingreso2 );
+       cuenta2.depositar(ingreso3);
+   
+       // saber el saldo
+       totalCuenta = cuenta3.saldo();
+       System.out.println("Total actual en la cuenta libreta 2022: " +  " $" + totalCuenta ); 
+
+       System.out.println("------------------------------------------------------------------");
+
+
         
     }
     

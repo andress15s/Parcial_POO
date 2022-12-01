@@ -7,23 +7,24 @@ public class Cuenta
     
         // 
         private int numeroCuenta;
-        private double saldo;
+        private int saldo;
         
-        public Cuenta(int cuenta1, double inicial) 
+        public Cuenta(int cuenta1, int inicial) 
         {
             numeroCuenta = cuenta1;
             saldo = inicial;
         } 
     
-        public void depositar(double cantidad) {
+        public void depositar(int cantidad)
+         {
             saldo = saldo + cantidad;
         } 
     
-        public void retirar(double cantidad) {
+        public void retirar(int cantidad) {
             saldo = saldo - cantidad;
         } 
     
-        public double saldo() {
+        public int saldo() {
             return saldo;
         }   
         

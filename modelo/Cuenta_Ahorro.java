@@ -6,30 +6,29 @@ public class Cuenta_Ahorro
     
         // 
         private int numeroCuenta;
-        private double saldo;
+        private int saldo;
         private double interes;
         
-        public Cuenta_Ahorro(int cuenta2, double inicial) 
+        public Cuenta_Ahorro(int cuenta2, int inicial) 
         {
             numeroCuenta = cuenta2;
             saldo = inicial;
         } 
     
-        public void depositar(double cantidad) {
-            saldo = saldo + cantidad;
+        public void depositar(int cantidad2) {
+            saldo = saldo + cantidad2;
         } 
     
-        public void retirar(double cantidad) {
-            saldo = saldo - cantidad;
+        public void retirar(int cantidad2) {
+            saldo = saldo - cantidad2;
         } 
 
-        public double interes ()
+        public void interes ()
         {
-          interes =  (0.04*saldo);
-          
+          interes = saldo + (0.04*saldo);
         }
 
-        public double saldo() {
+        public int saldo() {
             return saldo;
         }
            
