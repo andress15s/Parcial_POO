@@ -1,7 +1,6 @@
 package ejecutable;
 
 import modelo.*;
-
 public class Test 
 {
    
@@ -17,10 +16,10 @@ public class Test
         cuenta1 = new Cuenta(11111, 2000000);
 
         Cuenta_Ahorro cuenta2;
-        cuenta2 = new Cuenta_Ahorro(12345, 30000000);
+        cuenta2 = new Cuenta_Ahorro(12345, 3000000);
 
         Libreta_2022 cuenta3;
-        cuenta3 = new Libreta_2022(12543, 50000000);
+        cuenta3 = new Libreta_2022(12543, 5000000);
 
 
 
@@ -55,10 +54,10 @@ public class Test
         System.out.println("Se ingresan en la cuenta ahorros: " +  " $ "  + cantidad2 );
         cuenta2.depositar(cantidad2);
 
-    
         // saber el saldo
         totalCuenta = cuenta2.saldo();
-        System.out.println("Total actual en la cuenta ahorros: " +  " $" + totalCuenta );    
+        System.out.println("Total actual en la cuenta ahorros: " +  " $" + totalCuenta );
+        System.out.println("Total interes actual en la cuenta ahorros: " +  " $" + cuenta2.interes );
             
         System.out.println("-----------------------------------------------------------");
         //---------------------------------------------------------------------
@@ -69,13 +68,14 @@ public class Test
         System.out.println("Total actual en la cuenta libreta 2022: " + cuenta3 +  " $ " + totalCuenta );
 
        // consignar
-       int ingreso3 = 950000;
-       System.out.println("Se ingresan en la cuenta libreta 2022: " +  " $ "  + ingreso2 );
-       cuenta2.depositar(ingreso3);
+       int cantidad3 = 950000;
+       System.out.println("Se ingresan en la cuenta libreta 2022: " +  " $ "  + cantidad3 );
+       cuenta2.depositar(cantidad3);
    
        // saber el saldo
        totalCuenta = cuenta3.saldo();
        System.out.println("Total actual en la cuenta libreta 2022: " +  " $" + totalCuenta ); 
+       System.out.println("Total de interes actual en la cuenta libreta: " +  " $" + cuenta3.interes );
 
        System.out.println("------------------------------------------------------------------");
 
