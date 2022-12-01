@@ -33,7 +33,7 @@ public class Libreta_2022
         
         public int interes ()
         {
-          return interes =  (int) (saldo + (0.08*saldo));
+          return interes =  (int) (saldo + (0.08 * saldo));
         }
         
 
